@@ -38,7 +38,7 @@ async function Page() {
     <DefaultLayout>
       <div className="flex flex-col items-center gap-4">
         {tasks.map((task) => (
-          <TaskCard key={task.slug} task={task} />
+          <TaskCard key={task.slug} task={task} display={"compact"} />
         ))}
       </div>
     </DefaultLayout>

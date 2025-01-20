@@ -58,12 +58,14 @@ export function ContestCard({ contest }: ContestCardProps) {
 };
 
 
+type TaskCardDisplayStyle = "full" | "compact";
 
 type TaskCardProps = {
   task: TaskScoredSummaryDTO;
+  display? : TaskCardDisplayStyle;
 };
 
-export function TaskCard({ task }: TaskCardProps) {
+export function TaskCard({ task, display="full" }: TaskCardProps) {
   const url = getPath({ kind: Path.TaskView, slug: task.slug });
 
   let top_class = classNames(styles["card-top"], "group-hover:bg-gray-150");
